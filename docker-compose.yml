@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  dropthemilk:
+    image: ghcr.io/matthiasnys/dropthemilk:latest
+    container_name: dropthemilk
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
